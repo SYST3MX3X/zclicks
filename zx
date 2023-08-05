@@ -1,0 +1,65 @@
+local pichulasuelta = true
+local PapiTorsoGg = game.Players.LocalPlayer.Character.Torso
+local cuerpazo = game.Players.LocalPlayer.Character
+local uh = game.Players.LocalPlayer.Backpack:FindFirstChild("Axe")
+
+while true do  --hay q ejecutarlo cada q hagas respawn o la wea no sirve
+wait(0.05) --pa q no salte anti cheat mami
+-----------------------------------------------------------------------game:GetService("RunService").RenderStepped:connect(function()
+if pichulasuelta == true then --alta flojera hacerlo mas chico
+if uh then 
+if game:GetService("Workspace"):FindFirstChild("SummerMap") then
+for i,v in pairs(game:GetService("Workspace"):FindFirstChild("SummerMap"):GetDescendants()) do
+if v.Parent.Name == "Ores" and v:IsA("Part") and v.Name == "Block" then -- solo minerales supongo
+if (v.Position - PapiTorsoGg.Position).Magnitude < 40 then -- pa q la wea no se bugee 
+local args = {
+    [1] = v
+}
+
+uh.RemoteEvent:FireServer(unpack(args)) --del remotespy lol
+end
+end
+end
+end
+if game:GetService("Workspace"):FindFirstChild("WinterMap") then
+for i,v in pairs(game:GetService("Workspace"):FindFirstChild("WinterMap"):GetDescendants()) do
+if v.Parent.Name == "Ores" and v:IsA("Part") and v.Name == "Block" then
+if (v.Position - PapiTorsoGg.Position).Magnitude < 40 then
+local args = {
+    [1] = v
+}
+
+uh.RemoteEvent:FireServer(unpack(args))
+end
+end
+end
+end
+if game:GetService("Workspace"):FindFirstChild("SpringMap") then
+for i,v in pairs(game:GetService("Workspace"):FindFirstChild("SpringMap"):GetDescendants()) do
+if v.Parent.Name == "Ores" and v:IsA("Part") and v.Name == "Block" then
+if (v.Position - PapiTorsoGg.Position).Magnitude < 40 then
+local args = {
+    [1] = v
+}
+
+uh.RemoteEvent:FireServer(unpack(args))
+end
+end
+end
+end
+if game:GetService("Workspace"):FindFirstChild("SpaceMap") then
+for i,v in pairs(game:GetService("Workspace"):FindFirstChild("SpaceMap"):GetDescendants()) do
+if v.Parent.Name == "Ores" and v:IsA("Part") and v.Name == "Block" then
+if (v.Position - PapiTorsoGg.Position).Magnitude < 40 then
+local args = {
+    [1] = v
+}
+
+uh.RemoteEvent:FireServer(unpack(args))
+end
+end
+end
+end
+end
+end
+end
